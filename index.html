@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Google Fonts CDN Link -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome CDN Link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+</head>
+<script src="script.js">const faqItems = document.querySelectorAll(".faq-item");
+
+faqItems.forEach(item => {
+
+    const question = item.querySelector(".faq-question");
+
+    question.addEventListener("click", () => {
+
+        item.classList.toggle("active");
+
+    });
+
+});</script>
+
+<script>
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll("nav a");
+
+window.addEventListener("scroll", () => {
+
+  let currentSection = "";
+
+  sections.forEach(section => {
+
+    const sectionTop = section.offsetTop - 200;
+    const sectionHeight = section.offsetHeight;
+
+    if(window.scrollY >= sectionTop &&
+       window.scrollY < sectionTop + sectionHeight){
+
+      currentSection = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach(link => {
+
+    link.classList.remove("active");
+
+    if(link.getAttribute("href") === "#" + currentSection){
+      link.classList.add("active");
+    }
+  });
+
+});
+</script>
+<body>
+  <img class="image-gradient" src="assets/background/gradient.png" alt="gradient">
+  <div class="layer-blur"></div>  
+
+
+<div class="container">
+
+    <header>
+  <nav>
+    <a href="#home">HOME</a> 
+    <a href="#aboutme">ABOUT ME</a> 
+    <a href="#services">SERVICES</a> 
+    <a href="#skills">SKILLS</a> 
+    <a href="#projects">PROJECTS</a> 
+    <a href="#faq">FAQ</a> 
+    <a href="#contacts">CONTACTS</a> 
+  </nav>
+</header>
+
+<!-- TES SECTIONS -->
+<section id="home">
+
+  <main> 
+    <div class="content"
+      data-aos="fade-zoom-in"
+      data-aos-easing="ease-in-back"
+      data-aos-delay="300"
+      data-aos-offset="0"
+      data-aos-duration="1500">
+
+      <div class="tag">
+        I am OLLIANG MINTSA ANDRICK SOREL &wedbar;
+      </div>
+
+    </div>
+
+    <h1
+      data-aos="fade-zoom-in"
+      data-aos-duration="2000">
+      JUNIOR<br>DEVELOPPER
+    </h1>   
+
+    <p
+      data-aos="fade-zoom-in"
+      data-aos-duration="2500"
+      class="description">
+
+      I am a web developper junior with a passion for creating beautiful and functional websites.
+
+    </p> 
+
+    <div
+      data-aos="fade-zoom-in"
+      data-aos-duration="3000"
+      class="buttons">
+
+      <a href="#" class="btn-get-started">
+        <p>contact me &gt;</p>
+      </a>
+
+    </div>
+
+
+  </main>
+
+</section>
+
+</div>
+ 
+
+
+
+
+
+
+
+
+
+<script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.5/build/spline-viewer.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+
+
+<section id="aboutme">
+<div class="aboutme">
+  <h1>About Me</h1>
+  <p>
+    I am a web developper junior with a passion for creating beautiful and functional websites. 
+    I have a strong background in HTML, CSS, and JavaScript, and I am always eager to learn new technologies and techniques. 
+    I am a team player and I enjoy collaborating with others to create amazing projects.
+  </p>
+
+
+  <div class="moi">
+    <ul class="skills">
+    <li>html5</li>
+    <li>css3</li>
+    <li>javascript</li>
+    <li>Figma</li>
+    <li>Vercel</li>
+    <li>Git</li>
+  </ul>
+</div>
+
+<div class="brosse">
+  <ul class="private">
+    <li>2+ <p>years of experience</p> </li>
+    <li>3+ <p>projects completed</p> </li>
+    <li>5+ <p>tech mastered</p> </li>
+    <li>100% <p>satisfaction client</p></li>
+  </ul>
+</div>
+</div>
+</section>
+
+
+<section id="services">
+
+  <div class="services">
+
+    <h1>What I Offer</h1>
+
+    <p>
+      I offer a wide range of web development services, including:
+    </p>
+
+    <ul class="services-list">
+
+      <li>Web Design</li>
+
+      <li>Web Development</li>
+
+      <li>E-commerce Development</li>
+
+      <li>Content Management Systems</li>
+
+      <li>Search Engine Optimization</li>
+
+      <li>Website Maintenance and Support</li>
+
+    </ul>
+
+  </div>
+
+</section>
+
+
+<section id="skills">
+
+  <div class="compts">
+
+    <h1>My Skills</h1>
+
+    <p>
+      I have a strong background in the following technologies:
+    </p>
+
+    <div class="skills-container">
+
+      <!-- HTML -->
+      <div class="skill-card">
+        <div class="skill-info">
+          <span>HTML5</span>
+          <span>95%</span>
+        </div>
+
+        <div class="progress-bar">
+          <div class="progress html"></div>
+        </div>
+      </div>
+
+      <!-- CSS -->
+      <div class="skill-card">
+        <div class="skill-info">
+          <span>CSS3</span>
+          <span>90%</span>
+        </div>
+
+        <div class="progress-bar">
+          <div class="progress css"></div>
+        </div>
+      </div>
+
+      <!-- JS -->
+      <div class="skill-card">
+        <div class="skill-info">
+          <span>JavaScript</span>
+          <span>75%</span>
+        </div>
+
+        <div class="progress-bar">
+          <div class="progress js"></div>
+        </div>
+      </div>
+
+      <!-- React -->
+      <div class="skill-card">
+        <div class="skill-info">
+          <span>React</span>
+          <span>60%</span>
+        </div>
+
+        <div class="progress-bar">
+          <div class="progress react"></div>
+        </div>
+      </div>
+
+      <!-- Node -->
+      <div class="skill-card">
+        <div class="skill-info">
+          <span>Node.js</span>
+          <span>55%</span>
+        </div>
+
+        <div class="progress-bar">
+          <div class="progress node"></div>
+        </div>
+      </div>
+
+      <!-- Python -->
+      <div class="skill-card">
+        <div class="skill-info">
+          <span>Python</span>
+          <span>70%</span>
+        </div>
+
+        <div class="progress-bar">
+          <div class="progress python"></div>
+        </div>
+      </div>
+
+      <!-- Figma -->
+      <div class="skill-card">
+        <div class="skill-info">
+          <span>Figma</span>
+          <span>80%</span>
+        </div>
+
+        <div class="progress-bar">
+          <div class="progress figma"></div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="projects" id="projects">
+  <h1>My Projects</h1>
+  <p>here are some of my recent projects</p>
+
+  <div class="projects-container">
+
+    <div class="project-card card-blue">
+      <img src="assets/background/ebay replica.png" alt="Ebay Replica">
+      <div class="project-content">
+        <h2>Ebay Replica</h2>
+        <p>Application de commande de plats en ligne.</p>
+
+        <h4>Technologies :</h4>
+        <div class="techs">
+          <span>React</span>
+          <span>CSS</span>
+          <span>Vercel</span>
+        </div>
+
+        <a href=" C:\Users\ADMIN\Downloads\portfolios\Web Dev Portfolio\ebay copy\ebay website.html">Voir le projet</a>
+      </div>
+    </div>
+
+    <div class="project-card card-purple">
+      <img src="assets/background/abamaad.png" alt="AbAmAd">
+      <div class="project-content">
+        <h2>AbAmAd</h2>
+        <p>Site vitrine développé en HTML, CSS et JavaScript.</p>
+
+        <h4>Technologies :</h4>
+        <div class="techs">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+        </div>
+
+        <a href="C:\Users\ADMIN\Downloads\portfolios\Web Dev Portfolio\myshopGND\GNDthe shop .html">Voir le projet</a>
+      </div>
+    </div>
+
+    <div class="project-card card-green">
+      <img src="assets/background/portfolio.png" alt="Portfolio">
+      <div class="project-content">
+<h2>Mon Portfolio</h2>
+<p>Portfolio personnel présentant mes projets et compétences.</p>
+
+<h4>Technologies :</h4>
+<div class="techs">
+<span>React</span>
+<span>MUI</span>
+<span>Framer Motion</span>
+</div>
+
+<a href="#">Voir le projet</a>
+</div>
+</div>
+
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="faq" id="faq">
+
+  <h2>Frequently Asked Questions</h2>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      Quel type de projets développez-vous ?
+      <span>⌄</span>
+    </button>
+
+    <div class="faq-answer">
+      <p>
+        Je développe des sites web modernes, portfolios,
+        plateformes e-commerce, applications web et projets
+        personnalisés adaptés aux besoins de chaque client.
+      </p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      Travaillez-vous avec des clients internationaux ?
+      <span>⌄</span>
+    </button>
+
+    <div class="faq-answer">
+      <p>
+        Oui. Je peux collaborer à distance avec des clients
+        partout dans le monde grâce aux outils de communication
+        et de gestion de projet en ligne.
+      </p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      Combien de temps prend la réalisation d'un projet ?
+      <span>⌄</span>
+    </button>
+
+    <div class="faq-answer">
+      <p>
+        La durée dépend de la complexité du projet.
+        Un portfolio peut prendre quelques jours tandis qu'une
+        application complète peut nécessiter plusieurs semaines.
+      </p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      Mon site sera-t-il compatible mobile ?
+      <span>⌄</span>
+    </button>
+
+    <div class="faq-answer">
+      <p>
+        Oui. Tous mes projets sont conçus en responsive design
+        afin d'offrir une expérience optimale sur ordinateur,
+        tablette et smartphone.
+      </p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      Fournissez-vous la maintenance après livraison ?
+      <span>⌄</span>
+    </button>
+
+    <div class="faq-answer">
+      <p>
+        Oui. Je peux assurer les mises à jour,
+        corrections et améliorations après la mise en ligne
+        du projet.
+      </p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      Puis-je demander des modifications après livraison ?
+      <span>⌄</span>
+    </button>
+
+    <div class="faq-answer">
+      <p>
+        Bien sûr. Des ajustements peuvent être effectués afin
+        que le résultat corresponde parfaitement à vos attentes.
+      </p>
+    </div>
+  </div>
+
+  <!-- NOTE EN BAS -->
+
+  <div class="faq-contact">
+    <p>
+      <strong>Vous n'avez pas trouvé votre réponse ?</strong><br>
+      Si votre question ne figure pas dans cette FAQ,
+      n'hésitez pas à me contacter directement.
+    </p>
+
+    <a href="#contact" class="contact-btn">
+      Contact Me
+    </a>
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+<!--tout simplement le footer contenant nos informations-->
+<div class="footer">
+<section id="contacts">
+  <div class="c1">
+    <h4><u>let's keep in touch</u></h4>
+
+    <ul class="social">
+      <li>
+        <a href="#" class="link">
+          <i class="fa-brands fa-facebook-f"></i>
+          <span class="tooltip" data-name="facebook"></span>
+        </a>
+      </li>
+
+      <li>
+        <a href="#" class="link">
+          <i class="fa-brands fa-instagram"></i>
+          <span class="tooltip" data-name="instagram"></span>
+        </a>
+      </li>
+
+      <li>
+        <a href="#" class="link">
+          <i class="fa-brands fa-github"></i>
+          <span class="tooltip" data-name="github"></span>
+        </a>
+      </li>
+
+      <li>
+        <a href="#" class="link">
+          <i class="fa-brands fa-pinterest-p"></i>
+          <span class="tooltip" data-name="pinterest"></span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="blueprint">
+    <h4>Copyright © 2026 Andrick Sorel AKA GhostNeverDie Inc. All Rights Reserved.</h4>
+  </div>
+</section>
+</div>
+
+
+</body>
+</html>
