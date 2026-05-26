@@ -1,0 +1,92 @@
+essaie pour mon portfolio
+* {
+  height: 5px;
+  background: #ff8c00;
+  transition: 0.3s;
+  box-shadow: 0 0 15px #ff8c00;
+}
+
+.menu-item.active {
+  transform: scale(1.12);
+  opacity: 1;
+  color: #fff;
+  text-shadow:
+    0 0 10px #ff8c00,
+    0 0 25px #ff8c00,
+    0 0 45px rgba(255,140,0,0.7);
+}
+
+.menu-item.active::before {
+  width: 90px;
+}
+
+.arrow {
+  font-size: 2.5rem;
+  color: #ff8c00;
+  animation: float 2s ease-in-out infinite;
+  text-shadow: 0 0 20px #ff8c00;
+  width: fit-content;
+}
+
+.up {
+  margin-bottom: 25px;
+}
+
+.down {
+  margin-top: 25px;
+}
+
+.description-box {
+  width: 35%;
+  position: absolute;
+  bottom: 50px;
+  left: 80px;
+  padding: 25px 30px;
+  background: rgba(0,0,0,0.45);
+  border: 2px solid rgba(255,140,0,0.4);
+  backdrop-filter: blur(8px);
+  z-index: 2;
+  box-shadow: 0 0 30px rgba(255,140,0,0.25);
+}
+
+.description-box h2 {
+  font-size: 2.2rem;
+  color: #ffb347;
+  margin-bottom: 10px;
+}
+
+.description-box p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@media(max-width: 900px) {
+
+  .menu-container {
+    width: 100%;
+    padding-left: 40px;
+  }
+
+  .menu-item {
+    font-size: 2.5rem;
+  }
+
+  .description-box {
+    width: 85%;
+    left: 40px;
+  }
+
+  .logo span {
+    font-size: 3rem;
+  }
+}
