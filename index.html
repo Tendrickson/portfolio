@@ -66,22 +66,48 @@ window.addEventListener("scroll", () => {
 
 });
 </script>
+
+
+
+
+<script>
+const menuBtn = document.getElementById("menuBtn");
+const sideNav = document.getElementById("sideNav");
+
+menuBtn.addEventListener("click", () => {
+  sideNav.classList.toggle("active");
+});
+
+document.querySelectorAll("#sideNav a").forEach(link => {
+  link.addEventListener("click", () => {
+    sideNav.classList.remove("active");
+  });
+});
+</script>
+
+
+
 <body>
   <img class="image-gradient" src="assets/background/gradient.png" alt="gradient">
   <div class="layer-blur"></div>  
 
 
 <div class="container">
+  <header>
+  <input type="checkbox" id="menu-toggle">
 
-    <header>
-  <nav>
-    <a href="#home">HOME</a> 
-    <a href="#aboutme">ABOUT ME</a> 
-    <a href="#services">SERVICES</a> 
-    <a href="#skills">SKILLS</a> 
-    <a href="#projects">PROJECTS</a> 
-    <a href="#faq">FAQ</a> 
-    <a href="#contacts">CONTACTS</a> 
+  <label for="menu-toggle" class="menu-btn">
+    ☰
+  </label>
+
+  <nav class="side-nav">
+    <a href="#home">HOME</a>
+    <a href="#aboutme">ABOUT ME</a>
+    <a href="#services">SERVICES</a>
+    <a href="#skills">SKILLS</a>
+    <a href="#projects">PROJECTS</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contacts">CONTACTS</a>
   </nav>
 </header>
 
@@ -397,7 +423,21 @@ window.addEventListener("scroll", () => {
 </div>
 </section>
 
+<script>
+const cards = document.querySelectorAll(".project-card");
 
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
+}, {
+  threshold: 0.2
+});
+
+cards.forEach(card => observer.observe(card));
+</script>
 
 
 
